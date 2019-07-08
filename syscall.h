@@ -20,3 +20,10 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+
+
+// Lecture 2
+#define SYS_getyear     22
+
+// HOTD 2
+#define SYS_getmysize   23

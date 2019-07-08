@@ -80,3 +80,18 @@ sys_uptime(void) {
     release(&tickslock);
     return xticks;
 }
+
+
+// Lecture 2
+int
+sys_getyear(void) {
+    return 1975;
+}
+
+// HOTD 2
+int
+sys_getmysize(void) {
+    int sz;
+    sz = proc->sz;
+    return sz;
+}

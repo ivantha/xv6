@@ -23,6 +23,12 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 
+// Lecture 2
+int getyear(void);
+
+// HOTD 2
+int getmysize(void);
+
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);
