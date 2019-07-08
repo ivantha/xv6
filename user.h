@@ -23,6 +23,29 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 
+int getyear(void);
+
+// myhack2
+int getmysize(void);
+
+// myhack3
+int getkernelstartaddr(void);
+int getkernelendaddr(void);
+int getkernelvariaddr(void);
+int getsystemcalladdr(void);
+
+// myhack4
+int setpriority(int);
+
+// myhack5
+int getinodesize(char*);
+
+// myhack7
+int mycall(int, void *);
+
+// hotd9
+int vmtrap(int);
+
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);

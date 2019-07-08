@@ -29,3 +29,25 @@ SYSCALL(getpid)
 SYSCALL(sbrk)
 SYSCALL(sleep)
 SYSCALL(uptime)
+
+SYSCALL(getyear)
+
+// myhack2
+SYSCALL(getmysize)
+
+// myhack3
+SYSCALL(getkernelstartaddr)
+SYSCALL(getkernelendaddr)
+SYSCALL(getkernelvariaddr)
+SYSCALL(getsystemcalladdr)
+
+// myhack4
+SYSCALL(setpriority)
+
+// myhack5
+SYSCALL(getinodesize)
+
+// myhack7
+SYSCALL(mycall)
+// hotd9
+SYSCALL(vmtrap)

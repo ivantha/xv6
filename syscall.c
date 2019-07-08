@@ -99,6 +99,29 @@ extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
 
+extern int sys_getyear(void);
+
+// myhack2
+extern int sys_getmysize(void);
+
+// myhack3
+extern int sys_getkernelstartaddr(void);
+extern int sys_getkernelendaddr(void);
+extern int sys_getkernelvariaddr(void);
+extern int sys_getsystemcalladdr(void);
+
+// myhack4
+extern int sys_setpriority(void);
+
+// myhack5
+extern int sys_getinodesize(void);
+
+// myhack7
+extern int sys_mycall(void);
+
+// hotd9
+extern int sys_vmtrap(void);
+
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
 [SYS_exit]    sys_exit,
@@ -121,6 +144,29 @@ static int (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+
+[SYS_getyear]   sys_getyear,
+
+// myhack2
+[SYS_getmysize] sys_getmysize,
+
+// mahack3
+[SYS_getkernelstartaddr]    sys_getkernelstartaddr,
+[SYS_getkernelendaddr]      sys_getkernelendaddr,
+[SYS_getkernelvariaddr]     sys_getkernelvariaddr,
+[SYS_getsystemcalladdr]     sys_getsystemcalladdr,
+
+// myhack4
+[SYS_setpriority]     sys_setpriority,
+
+// myhack5
+[SYS_getinodesize]     sys_getinodesize,
+
+// myhack7
+[SYS_mycall]     sys_mycall,
+
+// hotd9
+[SYS_vmtrap]   sys_vmtrap,
 };
 
 void

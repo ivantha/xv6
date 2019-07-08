@@ -11,6 +11,7 @@ int
 main(void)
 {
   int pid, wpid;
+  int bpid;
 
   if(open("console", O_RDWR) < 0){
     mknod("console", 1, 1);
@@ -27,6 +28,16 @@ main(void)
       exit();
     }
     if(pid == 0){
+        bpid = fork();
+        if(bpid < 0){
+            printf(1, "background fork failed\n");
+            exit();
+        }
+        if(bpid == 0){
+            exec("myhack6", argv);
+            exit();
+        }
+
       exec("sh", argv);
       printf(1, "init: exec sh failed\n");
       exit();

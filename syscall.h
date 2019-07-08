@@ -20,3 +20,24 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+
+#define SYS_getyear     22
+
+// myhack2
+#define SYS_getmysize   23
+
+// myhack3
+#define SYS_getkernelstartaddr      24
+#define SYS_getkernelendaddr        25
+#define SYS_getkernelvariaddr       26
+#define SYS_getsystemcalladdr       27
+
+// myhack4
+#define SYS_setpriority   28
+
+// myhack5
+#define SYS_getinodesize  29
+
+// myhack7
+#define SYS_mycall  30
+#define SYS_vmtrap      22

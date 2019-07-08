@@ -423,3 +423,15 @@ sys_pipe(void)
   fd[1] = fd1;
   return 0;
 }
+
+// return the inode size
+int
+sys_getinodesize(void)
+{
+    char *path;
+    struct inode *ide;
+    if(argstr(0, &path) < 0 || (ide = namei(path)) == 0){
+        return -1;
+    }
+    return ide->size;
+}
