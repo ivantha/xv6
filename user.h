@@ -29,6 +29,12 @@ int getyear(void);
 // HOTD 2
 int getmysize(void);
 
+// HOTD 3
+int getkernelstartaddr(void);
+int getkernelendaddr(void);
+int getkernelvariaddr(void);
+int getkernelcalladdr(void);
+
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);

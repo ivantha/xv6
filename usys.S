@@ -35,3 +35,9 @@ SYSCALL(getyear)
 
 // HOTD 2
 SYSCALL(getmysize)
+
+// HOTD 3
+SYSCALL(getkernelstartaddr)
+SYSCALL(getkernelendaddr)
+SYSCALL(getkernelvariaddr)
+SYSCALL(getkernelcalladdr)

@@ -172,6 +172,7 @@ UPROGS=\
 	_zombie\
 	_myprog2\
 	_myhack2\
+	_myhack3\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
@@ -246,6 +247,7 @@ EXTRA=\
 	.gdbinit.tmpl gdbutil\
 	myprog2.c\
 	myhack2.c\
+	myhack3.c\
 
 dist:
 	rm -rf dist

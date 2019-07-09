@@ -27,3 +27,9 @@
 
 // HOTD 2
 #define SYS_getmysize   23
+
+// HOTD 3
+#define SYS_getkernelstartaddr      24
+#define SYS_getkernelendaddr        25
+#define SYS_getkernelvariaddr       26
+#define SYS_getkernelcalladdr       27

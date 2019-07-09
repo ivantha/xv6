@@ -95,3 +95,29 @@ sys_getmysize(void) {
     sz = proc->sz;
     return sz;
 }
+
+// HOTD 3
+int
+sys_getkernelstartaddr(void) {
+    int addr = (int) P2V(0);
+    return addr;
+}
+
+int
+sys_getkernelendaddr(void) {
+    int addr = (int) p2v(PHYSTOP);
+    return addr;
+}
+
+int
+sys_getkernelvariaddr(void) {
+    int i = 1;
+    int addr = (int)&i;
+    return addr;
+}
+
+int
+sys_getkernelcalladdr(void) {
+    int addr = (int)&sys_fork;
+    return addr;
+}

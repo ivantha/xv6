@@ -105,6 +105,12 @@ extern int sys_getyear(void);
 // HOTD 2
 extern int sys_getmysize(void);
 
+// HOTD 3
+extern int sys_getkernelstartaddr(void);
+extern int sys_getkernelendaddr(void);
+extern int sys_getkernelvariaddr(void);
+extern int sys_getkernelcalladdr(void);
+
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
 [SYS_exit]    sys_exit,
@@ -133,6 +139,12 @@ static int (*syscalls[])(void) = {
 
 // HOTD 2
 [SYS_getmysize]     sys_getmysize,
+
+// HOTD 3
+[SYS_getkernelstartaddr]    sys_getkernelstartaddr,
+[SYS_getkernelendaddr]      sys_getkernelendaddr,
+[SYS_getkernelvariaddr]     sys_getkernelvariaddr,
+[SYS_getkernelcalladdr]     sys_getkernelcalladdr,
 };
 
 void
