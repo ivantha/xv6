@@ -41,6 +41,9 @@ int setpriority(int);
 // HOTD 5
 int getinodesize(char*);
 
+// HOTD 9
+int vmtrap(int);
+
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);

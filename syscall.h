@@ -39,3 +39,6 @@
 
 // HOTD 5
 #define SYS_getinodesize    29
+
+// HOTD 9
+#define SYS_vmtrap          30

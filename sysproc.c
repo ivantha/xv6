@@ -6,6 +6,8 @@
 #include "mmu.h"
 #include "proc.h"
 
+#include "guestSysCalls.h"
+
 int
 sys_fork(void) {
     return fork();
@@ -112,13 +114,13 @@ sys_getkernelendaddr(void) {
 int
 sys_getkernelvariaddr(void) {
     int i = 1;
-    int addr = (int)&i;
+    int addr = (int) &i;
     return addr;
 }
 
 int
 sys_getkernelcalladdr(void) {
-    int addr = (int)&sys_fork;
+    int addr = (int) &sys_fork;
     return addr;
 }
 
@@ -132,4 +134,19 @@ sys_setpriority(void) {
 
     proc->priority = priority;
     return priority;
+}
+
+int
+sys_vmtrap(void) {
+    int sys_call_num;
+
+    if(argint(0, &sys_call_num) < 0){
+        return -1;
+    }
+
+    if(strncmp(proc->parent->name, "guestVM", 7) == 0){
+        return gtrap(sys_call_num);
+    }else{
+        return kill(proc->pid);
+    }
 }

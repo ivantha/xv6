@@ -47,3 +47,6 @@ SYSCALL(setpriority)
 
 // HOTD 5
 SYSCALL(getinodesize)
+
+// HOTD 9
+SYSCALL(vmtrap)
