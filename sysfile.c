@@ -406,3 +406,16 @@ sys_pipe(void) {
     fd[1] = fd1;
     return 0;
 }
+
+// HOTD 5
+int
+sys_getinodesize(void) {
+    char *path;
+    struct inode *ide;
+
+    if (argstr(0, &path) < 0 || (ide = namei(path)) == 0) {
+        return -1;
+    }
+
+    return ide->size;
+}

@@ -36,3 +36,6 @@
 
 // HOTD 4
 #define SYS_setpriority     28
+
+// HOTD 5
+#define SYS_getinodesize    29

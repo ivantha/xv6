@@ -38,6 +38,9 @@ int getkernelcalladdr(void);
 // HOTD 4
 int setpriority(int);
 
+// HOTD 5
+int getinodesize(char*);
+
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);

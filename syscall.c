@@ -114,6 +114,9 @@ extern int sys_getkernelcalladdr(void);
 // HOTD 4
 extern int sys_setpriority(void);
 
+// HOTD 5
+extern int sys_getinodesize(void);
+
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
 [SYS_exit]    sys_exit,
@@ -151,6 +154,9 @@ static int (*syscalls[])(void) = {
 
 // HOTD 4
 [SYS_setpriority]       sys_setpriority,
+
+// HOTD 5
+[SYS_getinodesize]      sys_getinodesize,
 };
 
 void

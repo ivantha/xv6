@@ -44,3 +44,6 @@ SYSCALL(getkernelcalladdr)
 
 // HOTD 4
 SYSCALL(setpriority)
+
+// HOTD 5
+SYSCALL(getinodesize)
