@@ -175,6 +175,7 @@ UPROGS=\
 	_myhack3\
 	_myhack4\
 	_myhack5\
+	_myhack6\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
@@ -252,6 +253,7 @@ EXTRA=\
 	myhack3.c\
 	myhack4.c\
 	myhack5.c\
+	myhack6.c\
 
 dist:
 	rm -rf dist
