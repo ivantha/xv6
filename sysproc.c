@@ -121,3 +121,15 @@ sys_getkernelcalladdr(void) {
     int addr = (int)&sys_fork;
     return addr;
 }
+
+// HOTD 4
+int
+sys_setpriority(void) {
+    int priority;
+
+    if (argint(0, &priority) < 0)
+        return -1;
+
+    proc->priority = priority;
+    return priority;
+}

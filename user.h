@@ -35,6 +35,9 @@ int getkernelendaddr(void);
 int getkernelvariaddr(void);
 int getkernelcalladdr(void);
 
+// HOTD 4
+int setpriority(int);
+
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);

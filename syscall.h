@@ -33,3 +33,6 @@
 #define SYS_getkernelendaddr        25
 #define SYS_getkernelvariaddr       26
 #define SYS_getkernelcalladdr       27
+
+// HOTD 4
+#define SYS_setpriority     28

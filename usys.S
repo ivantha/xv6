@@ -41,3 +41,6 @@ SYSCALL(getkernelstartaddr)
 SYSCALL(getkernelendaddr)
 SYSCALL(getkernelvariaddr)
 SYSCALL(getkernelcalladdr)
+
+// HOTD 4
+SYSCALL(setpriority)
