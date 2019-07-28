@@ -441,4 +441,8 @@ procdump(void) {
     }
 }
 
-
+// HOTD 7
+struct proc *
+getptable(void) {
+    return &ptable.proc[0];
+}

@@ -136,17 +136,48 @@ sys_setpriority(void) {
     return priority;
 }
 
+// HOTD 7
+int
+sys_mycall(void) {
+    int size;
+    char *buf;
+    char *s;
+    struct proc p[NPROC];
+
+    if ((argint(0, &size) < 0) || (argptr(1, &buf, size) < 0)) {
+        return -1;
+    }
+
+    s = buf;
+
+    p = getptable();
+
+    while (buf + size > s) {
+        // Set valid
+        *(int *) s = 1;
+        s += 4;
+
+        *(int *) s = p[0].priority;
+        s += 4;
+        *(int *) s = 3;
+        s += 4;
+    }
+
+    return 1;
+}
+
+// HOTD 9
 int
 sys_vmtrap(void) {
     int sys_call_num;
 
-    if(argint(0, &sys_call_num) < 0){
+    if (argint(0, &sys_call_num) < 0) {
         return -1;
     }
 
-    if(strncmp(proc->parent->name, "guestVM", 7) == 0){
+    if (strncmp(proc->parent->name, "guestVM", 7) == 0) {
         return gtrap(sys_call_num);
-    }else{
+    } else {
         return kill(proc->pid);
     }
 }

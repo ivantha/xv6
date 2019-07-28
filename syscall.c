@@ -117,6 +117,9 @@ extern int sys_setpriority(void);
 // HOTD 5
 extern int sys_getinodesize(void);
 
+// HOTD 7
+extern int sys_mycall(void);
+
 // HOTD 9
 extern int sys_vmtrap(void);
 
@@ -160,6 +163,9 @@ static int (*syscalls[])(void) = {
 
 // HOTD 5
 [SYS_getinodesize]      sys_getinodesize,
+
+// HOTD 7
+[SYS_mycall]            sys_mycall,
 
 // HOTD 9
 [SYS_vmtrap]            sys_vmtrap,

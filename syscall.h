@@ -40,5 +40,8 @@
 // HOTD 5
 #define SYS_getinodesize    29
 
+// HOTD 7
+#define SYS_mycall          30
+
 // HOTD 9
-#define SYS_vmtrap          30
+#define SYS_vmtrap          31

@@ -41,6 +41,9 @@ int setpriority(int);
 // HOTD 5
 int getinodesize(char*);
 
+// HOTD 7
+int mycall(int, void*);
+
 // HOTD 9
 int vmtrap(int);
 

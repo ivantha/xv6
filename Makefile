@@ -177,6 +177,7 @@ UPROGS=\
 	_myhack4\
 	_myhack5\
 	_myhack6\
+	_ps\
 	_guestVM\
 	_application\
 
@@ -257,6 +258,7 @@ EXTRA=\
 	myhack4.c\
 	myhack5.c\
 	myhack6.c\
+	ps.c\
 
 dist:
 	rm -rf dist

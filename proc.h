@@ -78,3 +78,6 @@ struct proc {
 //   original data and bss
 //   fixed-size stack
 //   expandable heap
+
+// HOTD 7
+struct proc * getptable(void);
